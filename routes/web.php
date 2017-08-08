@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('{vue_router?}', function () {
+	return view('index');
+})->where('vue_router', '[\/\w\.-]*');

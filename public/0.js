@@ -517,7 +517,7 @@ exports = module.exports = __webpack_require__(42)(undefined);
 
 
 // module
-exports.push([module.i, "\n.profile {\n    display: flex;\n}\n@media (max-width: 576px) {\n.profile {\n        display: inline-block;\n}\n}\n", ""]);
+exports.push([module.i, "\n.profile {\n\tdisplay: flex;\n}\n@media (max-width: 576px) {\n.profile {\n\t\tdisplay: inline-block;\n}\n}\n", ""]);
 
 // exports
 
@@ -539,17 +539,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    components: {
-        'card': __WEBPACK_IMPORTED_MODULE_0__Card_vue___default.a
-    },
-    data: function data() {
-        return {
-            details: [{ title: 'Name', text: 'Nuttha Nantamongkonjarat', url: '/images/Name.jpg' }, { title: 'Job', text: 'Web Developer', url: '/images/Job.jpg' }, { title: 'Office', text: 'Jeban.com', url: '/images/Office.jpg' }]
-        };
-    },
-
-    methods: {},
-    mounted: function mounted() {}
+	components: {
+		'card': __WEBPACK_IMPORTED_MODULE_0__Card_vue___default.a
+	},
+	data: function data() {
+		return {
+			details: [{ title: 'Name', text: 'Nuttha Nantamongkonjarat', url: '/images/Name.jpg' }, { title: 'Job', text: 'Web Developer', url: '/images/Job.jpg' }, { title: 'Office', text: 'Jeban.com', url: '/images/Office.jpg' }]
+		};
+	}
 });
 
 /***/ }),
@@ -560,7 +557,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(71)
+  __webpack_require__(58)
 }
 var Component = __webpack_require__(44)(
   /* script */
@@ -570,7 +567,7 @@ var Component = __webpack_require__(44)(
   /* styles */
   injectStyle,
   /* scopeId */
-  "data-v-56b18954",
+  null,
   /* moduleIdentifier (server only) */
   null
 )
@@ -599,6 +596,48 @@ module.exports = Component.exports
 
 /***/ }),
 
+/***/ 58:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(59);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(43)("217d1626", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-56b18954\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Card.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-56b18954\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Card.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 59:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(42)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.card {\n  width: 100%;\n  text-align: left;\n  margin: 20px;\n}\n.card .card-block {\n    position: relative;\n    width: 360px;\n    padding-top: 100%;\n    padding-bottom: 0;\n    overflow: hidden;\n    margin: auto;\n}\n.card .card-block img {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n}\n.card .card-footer {\n    padding: 20px;\n    background-color: #FFF;\n}\n.card .card-footer .profile-card-title {\n      font-weight: bold;\n}\n@media (max-width: 400px) {\n.card {\n    margin: 0 0 15px 0;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ 60:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -615,11 +654,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['content'],
-    methods: {},
-    mounted: function mounted() {}
+	props: ['content']
 });
 
 /***/ }),
@@ -629,20 +670,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "profile-card"
+    staticClass: "card"
   }, [_c('div', {
-    staticClass: "profile-card-image"
+    staticClass: "card-block"
   }, [_c('img', {
     attrs: {
       "src": _vm.content.url
     }
   })]), _vm._v(" "), _c('div', {
-    staticClass: "profile-card-footer"
+    staticClass: "card-footer"
   }, [_c('h4', {
-    staticClass: "profile-card-title"
-  }, [_vm._v(" " + _vm._s(_vm.content.title) + " ")]), _vm._v(" "), _c('h6', {
-    staticClass: "profile-card-text"
-  }, [_vm._v(" " + _vm._s(_vm.content.text) + " ")])])])
+    staticClass: "card-title"
+  }, [_vm._v(" \n\t\t\t" + _vm._s(_vm.content.title) + "\n\t\t")]), _vm._v(" "), _c('h6', {
+    staticClass: "card-text"
+  }, [_vm._v("\n\t\t\t" + _vm._s(_vm.content.text) + "\n\t\t")])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -676,48 +717,6 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-ced5a6d6", module.exports)
   }
 }
-
-/***/ }),
-
-/***/ 71:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(72);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(43)("caf3c668", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-56b18954\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Card.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-56b18954\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Card.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ 72:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(42)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n.profile-card[data-v-56b18954] {\n  width: 100%;\n  text-align: left;\n  margin: 20px;\n  border: 1px solid #ccc;\n  box-shadow: 5px 5px 10px #ccc;\n}\n.profile-card .profile-card-image[data-v-56b18954] {\n    position: relative;\n    width: 360px;\n    padding-top: 100%;\n    overflow: hidden;\n    margin: auto;\n}\n.profile-card .profile-card-image img[data-v-56b18954] {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n}\n.profile-card .profile-card-footer[data-v-56b18954] {\n    padding: 20px;\n    background-color: #FFF;\n}\n.profile-card .profile-card-footer .profile-card-title[data-v-56b18954] {\n      font-weight: bold;\n}\n@media (max-width: 576px) {\n.profile-card[data-v-56b18954] {\n    margin: 0;\n}\n}\n", ""]);
-
-// exports
-
 
 /***/ })
 

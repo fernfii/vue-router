@@ -11,17 +11,10 @@ const Numbers = (resolve) => require(['./components/Number.vue'], resolve)
 const Profile = (resolve) => require(['./components/Profile.vue'], resolve)
 
 new Vue({
-
-  router,
-
-  components : {
-    Hello,
-    Numbers,
-    Profile
-  },
-
-  data : {
-
-  }
- 
+	router,
+	components : {
+		Hello,
+		Numbers,
+		Profile
+	}
 }).$mount('#app')

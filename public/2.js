@@ -437,23 +437,36 @@ module.exports = function listToStyles (parentId, list) {
 
 /***/ }),
 
-/***/ 46:
+/***/ 48:
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+
+/***/ 74:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(47);
+var content = __webpack_require__(75);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(43)("d408431c", content, false);
+var update = __webpack_require__(43)("5088f71e", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4fe1b784\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Hello.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4fe1b784\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Hello.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4fe1b784\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Hello.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4fe1b784\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Hello.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -464,7 +477,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 47:
+/***/ 75:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(42)(undefined);
@@ -472,25 +485,14 @@ exports = module.exports = __webpack_require__(42)(undefined);
 
 
 // module
-exports.push([module.i, "\n.hello[data-v-4fe1b784] {\n  color: #726E6D;\n  font-size: 48px;\n\tmargin: 20px;\n}\n", ""]);
+exports.push([module.i, "\n.hello {\n\tcolor: #726E6D;\n\tfont-size: 48px;\n\tmargin: 20px;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 48:
-/***/ (function(module, exports) {
-
-//
-//
-//
-//
-//
-
-/***/ }),
-
-/***/ 49:
+/***/ 76:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -500,7 +502,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "hello"
   }, [_c('p', {
     staticClass: "text-hello"
-  }, [_vm._v("Hello World")])])
+  }, [_vm._v("\n\t\tHello World\n\t")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -518,17 +520,17 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(46)
+  __webpack_require__(74)
 }
 var Component = __webpack_require__(44)(
   /* script */
   __webpack_require__(48),
   /* template */
-  __webpack_require__(49),
+  __webpack_require__(76),
   /* styles */
   injectStyle,
   /* scopeId */
-  "data-v-4fe1b784",
+  null,
   /* moduleIdentifier (server only) */
   null
 )
